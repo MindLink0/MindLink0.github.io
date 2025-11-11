@@ -1,0 +1,143 @@
+/* ===========================
+   RecursosProfesionales.css - Versión Final
+=========================== */
+
+.recursosprofesionales-container {
+  padding: 100px 20px;
+  background-color: #242220;  /* Fondo oscuro con el color solicitado */
+  color: #ffffff;  /* Texto blanco para buen contraste */
+  text-align: center;
+  min-height: 100vh;
+}
+
+
+.recursos-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #C6A252;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.recursos-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 4px;
+  background-color: #C6A252;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.recursos-section {
+  margin-bottom: 60px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.recursos-section h2 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+  background: linear-gradient(to right, #C6A252, #d4b16a);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(198, 162, 82, 0.3);
+}
+
+.recursos-list {
+  list-style: none;
+  padding: 0;
+}
+
+.recursos-list li {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #C6A252;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recursos-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 188, 212, 0.3);
+}
+
+.recursos-list strong {
+  color: #C6A252;
+}
+
+.recursos-list ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.recursos-list ul li {
+  background: none;
+  border: none;
+  padding: 5px 0;
+  box-shadow: none;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Responsividad general */
+@media (max-width: 768px) {
+  .recursos-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .recursos-section {
+    padding-inline: 1rem;
+  }
+
+  .recursos-section h2 {
+    font-size: 1.3rem;
+    padding: 8px 16px;
+  }
+
+  .recursos-list li {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .recursos-list ul {
+    padding-left: 15px;
+  }
+
+  .recursos-list ul li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsividad extra para móviles pequeños */
+@media (max-width: 480px) {
+  .recursos-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .recursos-section h2 {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+
+  .recursos-list li {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .recursos-list ul li {
+    font-size: 0.85rem;
+  }
+}

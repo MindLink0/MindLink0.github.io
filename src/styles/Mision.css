@@ -1,0 +1,242 @@
+/* Fondo general */
+.mision-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #242220;
+}
+
+/* Fondo parallax */
+.mision-background {
+  position: absolute;
+  inset: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Contenedor principal */
+.mision-content {
+  background-color: #242220;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  padding: 2rem;
+
+  /* --- Correcciones de layout --- */
+  max-width: 64rem;
+  width: 90%;              /* antes 100%, ahora deja un margen lateral elegante */
+  margin: 0 auto;          /* centra horizontalmente el bloque */
+  display: flex;           /* permite centrar contenido interno */
+  flex-direction: column;  /* mantiene el flujo vertical */
+  align-items: center;     /* centra elementos horizontalmente */
+  text-align: center;      /* centra el texto dentro */
+  
+  position: relative;
+  z-index: 10;
+}
+
+
+/* Título */
+.mision-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #C6A252;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.mision-title:hover {
+  color: #C6A252;
+}
+
+/* Iconos */
+.mision-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: #C6A252;
+  margin-bottom: 1rem;
+}
+
+/* Texto principal */
+.mision-text {
+  color: #EAEAEA;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estadísticas */
+.mision-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; /* evita que todo quede alineado al centro verticalmente */
+  text-align: center;
+  margin: 2rem 0; /* antes 1.5rem, más espacio vertical */
+  gap: 2rem; /* nuevo: separa más los bloques entre sí */
+  flex-wrap: wrap; /* nuevo: evita que se amontonen en pantallas pequeñas */
+}
+
+.mision-stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; /* nuevo: separa h2 y p dentro de cada columna */
+}
+
+.mision-stats h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #C6A252;
+}
+
+.mision-stats p {
+  font-size: 1rem; /* un poco más grande que 0.875rem */
+  color: #EAEAEA;
+  line-height: 1.6; /* mejora legibilidad */
+}
+
+
+/* Botón CTA */
+.mision-button {
+  background-color: #C6A252;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.mision-button:hover {
+  background-color: #C6A252;
+  transform: scale(1.05);
+}
+
+/* Cita */
+.mision-quote {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #EAEAEA;
+  text-align: center;
+}
+
+/* Redes sociales */
+.mision-social {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  color: #C6A252;
+}
+
+.mision-social a {
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.mision-social a:hover {
+  transform: scale(1.2);
+}
+
+/* Responsividad general */
+@media (max-width: 768px) {
+  .mision-title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .mision-icons {
+    font-size: 1.25rem;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .mision-text {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .mision-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .mision-stats h2 {
+    font-size: 1.6rem;
+  }
+
+  .mision-stats p {
+    font-size: 0.95rem;
+  }
+
+  .mision-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .mision-quote {
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
+
+  .mision-social {
+    font-size: 1.1rem;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+}
+
+/* Responsividad extra para móviles pequeños */
+@media (max-width: 480px) {
+  .mision-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .mision-icons {
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .mision-text {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+
+  .mision-stats h2 {
+    font-size: 1.4rem;
+  }
+
+  .mision-stats p {
+    font-size: 0.9rem;
+  }
+
+  .mision-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .mision-quote {
+    font-size: 0.9rem;
+  }
+
+  .mision-social {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+}

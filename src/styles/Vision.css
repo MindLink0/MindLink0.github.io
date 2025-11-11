@@ -1,0 +1,239 @@
+/* Fondo general */
+.vision-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #242220;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo parallax */
+.vision-background {
+  position: absolute;
+  inset: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+  filter: blur(2px);
+}
+
+/* Contenedor principal */
+.vision-content {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(36, 34, 32, 0.95);
+  border: 1px solid rgba(198, 162, 82, 0.2);
+  border-radius: 1.25rem;
+  padding: 3rem;
+  max-width: 60rem;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+/* Título */
+.vision-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #C6A252;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Iconos */
+.vision-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+  color: #C6A252;
+  margin-bottom: 2rem;
+}
+
+/* Texto principal */
+.vision-text {
+  font-size: 1.2rem;
+  color: #EAEAEA;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 50rem;
+}
+
+/* Estadísticas */
+.vision-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.vision-stats div {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(198, 162, 82, 0.2);
+}
+
+.vision-stats h2 {
+  font-size: 2.25rem;
+  color: #C6A252;
+  margin-bottom: 0.5rem;
+}
+
+.vision-stats p {
+  color: #EAEAEA;
+  font-size: 1rem;
+}
+
+/* Botón CTA */
+.vision-button {
+  background: transparent;
+  border: 2px solid #C6A252;
+  color: #C6A252;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vision-button:hover {
+  background-color: #C6A252;
+  color: #242220;
+  transform: translateY(-2px);
+}
+
+/* Cita */
+.vision-quote {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #EAEAEA;
+  border-left: 4px solid #C6A252;
+  padding-left: 1rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Redes sociales */
+.vision-social {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.vision-social a {
+  color: #C6A252;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.vision-social a:hover {
+  transform: scale(1.2);
+  color: #EAEAEA;
+}
+/* Responsividad general */
+@media (max-width: 768px) {
+  .vision-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .vision-icons {
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .vision-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .vision-stats {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .vision-stats h2 {
+    font-size: 1.8rem;
+  }
+
+  .vision-stats p {
+    font-size: 0.95rem;
+  }
+
+  .vision-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .vision-quote {
+    font-size: 1rem;
+    padding-left: 0.75rem;
+  }
+
+  .vision-social {
+    font-size: 1.25rem;
+    gap: 1rem;
+  }
+}
+
+/* Responsividad extra para móviles pequeños */
+@media (max-width: 480px) {
+  .vision-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .vision-icons {
+    font-size: 1.2rem;
+    gap: 0.75rem;
+  }
+
+  .vision-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .vision-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .vision-stats h2 {
+    font-size: 1.5rem;
+  }
+
+  .vision-stats p {
+    font-size: 0.9rem;
+  }
+
+  .vision-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .vision-quote {
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+  }
+
+  .vision-social {
+    font-size: 1.1rem;
+    gap: 0.75rem;
+  }
+}

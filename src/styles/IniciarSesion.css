@@ -1,0 +1,154 @@
+/* ===========================
+   IniciarSesion.css - Versión Final
+=========================== */
+
+.iniciarsesion-container {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
+  color: #ffffff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.iniciarsesion-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #C6A252;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.iniciarsesion-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 4px;
+  background-color: #C6A252;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.iniciarsesion-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.iniciarsesion-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #C6A252;
+}
+
+.iniciarsesion-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.iniciarsesion-form input::placeholder {
+  color: #ccc;
+}
+
+.iniciarsesion-form input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.error {
+  display: block;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.iniciarsesion-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #C6A252;
+  color: #0a0a0a;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.iniciarsesion-form button:hover {
+  background-color: #d4b16a;
+}
+
+/* Responsividad general */
+@media (max-width: 768px) {
+  .iniciarsesion-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .iniciarsesion-form {
+    padding: 30px 20px;
+  }
+
+  .iniciarsesion-form input {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .iniciarsesion-form button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .error {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsividad extra para móviles pequeños */
+@media (max-width: 480px) {
+  .iniciarsesion-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .iniciarsesion-form {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .iniciarsesion-form label {
+    font-size: 0.95rem;
+  }
+
+  .iniciarsesion-form input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .iniciarsesion-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .error {
+    font-size: 0.8rem;
+  }
+}

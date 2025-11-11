@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================
+    Global Variables & Typography
+======================== */
+:root {
+  --font-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* Paleta MindLink */
+  --color-bg: #D4E2D3; /* Fondo Verde Claro/Menta */
+  --color-text: #1C1C1C; /* Negro Oscuro/Gris Oscuro */
+  --color-box: #F7F7F0; /* Blanco Roto/Crema */
+  --color-accent: #C7A252; /* Dorado/Ocre */
+  --color-accent-hover: #a8863f; /* Dorado más oscuro */
+  --color-muted: #9ca3af;
+  --color-border: #b5c2b5;
+  --color-btn-bg: #C7A252;
+  --color-btn-text: #1C1C1C;
+
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --shadow-strong: 0 0 60px rgba(199, 162, 82, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  font-weight: 400;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ========================
+   Links
+======================== */
+a {
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  transform: scale(1.05);
+}
+
+/* ========================
+    Headings
+======================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-text);
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* ========================
+   Focus & Accessibility
+======================== */
+*:focus {
+  outline: none !important;
+}
+
+button:focus,
+a:focus {
+  box-shadow: 0 0 0 3px rgba(199, 162, 82, 0.5);
+  border-radius: 0.5rem;
+}
+
+/* ========================
+   Animations
+======================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ========================
+   Responsive Headings
+======================== */
+@media (max-width: 768px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+}
+
+/* ========================
+   Dark Mode Support
+======================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1C1C1C;
+    --color-text: #F7F7F0;
+    --color-muted: #b5b5b5;
+    --color-border: #3f3f46;
+    --color-box: #2e2e2e;
+    --color-accent: #C7A252;
+    --color-accent-hover: #e0b86a;
+  }
+}

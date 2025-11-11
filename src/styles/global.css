@@ -1,0 +1,52 @@
+/* globals.css */
+
+/* Restablece márgenes y rellenos predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos básicos para el cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Asegura que los enlaces tengan un comportamiento adecuado */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+/* Elimina la decoración de los botones y los pone más amigables */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo básico para las imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo para los formularios */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Agrega un margen inferior común para los elementos del texto */
+p {
+  margin-bottom: 1em;
+}

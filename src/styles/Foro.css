@@ -1,0 +1,315 @@
+/* ===========================
+   Foro.css - Vista Dinámica con Categorías
+=========================== */
+
+.foro-container {
+  padding: 100px 20px;
+  background-color: #242220;  /* Fondo oscuro con el color solicitado */
+  color: #ffffff;  /* Texto blanco para buen contraste */
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.foro-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #C6A252;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.foro-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* Crear hilo */
+.foro-crear-hilo {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.foro-crear-hilo h2 {
+  font-size: 1.6rem;
+  color: #C6A252;
+  margin-bottom: 20px;
+}
+
+.foro-crear-hilo select,
+.foro-crear-hilo input,
+.foro-crear-hilo textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.foro-crear-hilo select option {
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+.foro-crear-hilo button {
+  padding: 12px 20px;
+  background-color: #C6A252;
+  color: #0a0a0a;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.foro-crear-hilo button:hover {
+  background-color: #d4b16a;
+}
+
+.foro-crear-hilo button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Hilo compacto */
+.foro-hilo {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.foro-hilo h2 {
+  font-size: 1.6rem;
+  color: #C6A252;
+  margin-bottom: 10px;
+}
+
+.foro-hilo p {
+  margin: 5px 0;
+}
+
+.foro-descripcion {
+  margin: 10px 0 20px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.foro-hilo button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #C6A252;
+  color: #0a0a0a;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.foro-hilo button:hover {
+  background-color: #C6A252;
+}
+
+/* Respuestas */
+.foro-respuestas {
+  margin-top: 20px;
+}
+
+.foro-respuestas h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #C6A252;
+}
+
+.respuesta {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-left: 4px solid #C6A252;
+  box-shadow: 0 0 10px rgba(11, 126, 11, 0.1);
+}
+
+.respuesta p {
+  margin: 5px 0;
+}
+
+/* Responder */
+.foro-responder {
+  margin-top: 20px;
+}
+
+.foro-responder h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #C6A252;
+}
+
+.foro-responder textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.foro-responder button {
+  padding: 10px 18px;
+  background-color: #C6A252;
+  color: #0a0a0a;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.foro-responder button:hover {
+  background-color: #d4b16a;
+}
+
+.foro-responder button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Normas */
+.foro-normas {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border-left: 4px solid #C6A252;
+}
+
+.foro-normas h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #C6A252;
+}
+
+.foro-normas ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.foro-normas li {
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+/* Responsividad general */
+@media (max-width: 768px) {
+  .foro-title {
+    font-size: 2rem;
+  }
+
+  .foro-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .foro-crear-hilo,
+  .foro-hilo,
+  .foro-normas {
+    padding: 20px;
+  }
+
+  .foro-crear-hilo h2,
+  .foro-hilo h2,
+  .foro-respuestas h3,
+  .foro-responder h4,
+  .foro-normas h3 {
+    font-size: 1.3rem;
+  }
+
+  .foro-crear-hilo button,
+  .foro-hilo button,
+  .foro-responder button {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .foro-crear-hilo select,
+  .foro-crear-hilo input,
+  .foro-crear-hilo textarea,
+  .foro-responder textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .respuesta {
+    padding: 12px 15px;
+  }
+}
+
+/* Responsividad extra para móviles pequeños */
+@media (max-width: 480px) {
+  .foro-title {
+    font-size: 1.6rem;
+  }
+
+  .foro-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .foro-crear-hilo,
+  .foro-hilo,
+  .foro-normas {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .foro-crear-hilo h2,
+  .foro-hilo h2,
+  .foro-respuestas h3,
+  .foro-responder h4,
+  .foro-normas h3 {
+    font-size: 1.1rem;
+  }
+
+  .foro-crear-hilo button,
+  .foro-hilo button,
+  .foro-responder button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .foro-crear-hilo select,
+  .foro-crear-hilo input,
+  .foro-crear-hilo textarea,
+  .foro-responder textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .respuesta {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .foro-normas ul {
+    padding-left: 15px;
+  }
+}

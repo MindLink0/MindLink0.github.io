@@ -1,0 +1,151 @@
+/* ========================
+   Footer.css - Pie de Página MindLink
+======================== */
+
+/* Estructura base para que el footer se mantenga abajo */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer como pie de página */
+footer {
+  background-color: #2e2e2e; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 1px solid #444;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  animation: fadeInFooter 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Enlaces con animación de subrayado */
+footer a {
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+footer a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #C6A252; /* Azul para hover */
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+footer a:hover {
+  color: #C6A252;
+  transform: scale(1.05);
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+/* Contenedor interno */
+footer .max-w-7xl {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  animation: fadeInLinks 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  footer .max-w-7xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Grupo de enlaces */
+footer .flex {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Animaciones */
+@keyframes fadeInFooter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLinks {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad general */
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  footer .max-w-7xl {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+
+  footer a {
+    font-size: 0.95rem;
+  }
+
+  footer .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* Responsividad extra para móviles pequeños */
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5rem 0.75rem;
+  }
+
+  footer a {
+    font-size: 0.9rem;
+  }
+
+  footer .max-w-7xl {
+    gap: 0.75rem;
+  }
+
+  footer .flex {
+    gap: 0.75rem;
+  }
+}

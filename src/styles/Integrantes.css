@@ -1,0 +1,159 @@
+/* ===========================
+   Integrantes.css - Edición Dorada Premium
+=========================== */
+
+/* Sección principal */
+.integrantes-section {
+  background-color: #242220; /* Fondo oscuro cálido */
+  padding-block: clamp(60px, 10vh, 100px); /* Espaciado vertical adaptable */
+  padding-inline: 2rem; /* Espaciado lateral */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra verticalmente si hay poco contenido */
+  min-height: 80vh; /* Altura moderada, no ocupa toda la pantalla */
+}
+
+/* Título */
+.integrantes-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #C6A252; /* Dorado envejecido */
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.integrantes-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 3px;
+  background-color: #C6A252;
+  border-radius: 2px;
+}
+
+/* Contenedor (Grid) */
+.integrantes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 70rem;
+  padding: 0 2rem;
+}
+
+/* Tarjeta individual */
+.integrante-card {
+  background-color: rgba(36, 34, 32, 0.95); /* Fondo semi translúcido */
+  border: 1px solid rgba(198, 162, 82, 0.2); /* Dorado translúcido */
+  border-radius: 1.25rem;
+  padding: 2.5rem 1.5rem;
+  color: #EAEAEA; /* Gris claro */
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  transition: all 0.35s ease;
+}
+
+/* Hover */
+.integrante-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(198, 162, 82, 0.5);
+  box-shadow: 0 25px 50px rgba(198, 162, 82, 0.15);
+}
+
+/* Icono */
+.integrante-icon {
+  font-size: 2.2rem;
+  color: #C6A252;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.integrante-card:hover .integrante-icon {
+  transform: scale(1.15);
+}
+
+/* Nombre */
+.nombre {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #C6A252;
+  margin-bottom: 0.3rem;
+}
+
+/* Rol */
+.rol {
+  font-size: 1rem;
+  color: #EAEAEA;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Responsividad general */
+@media (max-width: 768px) {
+  .integrantes-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .integrantes-grid {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .integrante-card {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .integrante-icon {
+    font-size: 2rem;
+  }
+
+  .nombre {
+    font-size: 1.2rem;
+  }
+
+  .rol {
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsividad extra para móviles pequeños */
+@media (max-width: 480px) {
+  .integrantes-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .integrantes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .integrante-card {
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .integrante-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .nombre {
+    font-size: 1.1rem;
+  }
+
+  .rol {
+    font-size: 0.9rem;
+  }
+}
